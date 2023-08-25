@@ -10,4 +10,5 @@ public interface ProductInterface {
     Product search(Long id);
     double calcIGV(Product product);
     double calcTotal(Product product);
+    public double searchIGV(Long id);
 }

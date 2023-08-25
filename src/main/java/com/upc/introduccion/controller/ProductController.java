@@ -20,4 +20,13 @@ public class ProductController {
     public List<Product> getProducts(){
         return productInterface.getProducts();
     }
+    @GetMapping("/product/{id}")
+    public Product search(@PathVariable(value = "id") Long id){
+       return productInterface.search(id);
+    }
+
+    @GetMapping("/product/igv/{id}")
+    public double searchIGV(@PathVariable(value = "id") Long id){
+        return productInterface.searchIGV(id);
+    }
 }
